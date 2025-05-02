@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8444a7ab4e52a9b9",
+        "id": "aad678e7bee54fc4",
         "type": "tabs",
         "children": [
           {
-            "id": "aec0623db8d8c315",
+            "id": "8e719f54cd13e6dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anotações.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Anotações"
+              "title": "Nova aba"
             }
           }
         ]
@@ -169,23 +165,37 @@
   },
   "active": "4367fa409ae0e2cd",
   "lastOpenFiles": [
-    "Sem título",
-    "2025-04-24.md",
+    "My mind/Auxiliares/Git/Git bash.md",
+    "My mind/Linguagens/Python/Introdução.md",
+    "My mind/Auxiliares/Linux/Linux.md",
+    "Pasted image 20250429160011.png",
     "Sem título.canvas",
+    "2025-04-29.md",
     "Anotações.md",
-    "Bots/Python/Discord",
-    "Bots/Python/Telegram",
-    "Bots/Python",
-    "Bots",
-    "RPA/Python/Selenium",
-    "RPA/Python",
-    "RPA/Python/PyAutoGui",
-    "RPA",
-    "Linguagens/PHP",
-    "Linguagens/Pawn",
-    "Banco de dados/NO SQL/MongoDB.md",
-    "Banco de dados/SQL/MySQL.md",
-    "Banco de dados/SQL/PostgresSQL.md",
+    "My mind/Auxiliares/Docker/Pasted image 20250429155047.png",
+    "My mind/Auxiliares/Docker/Docker.md",
+    "My mind/Auxiliares/Linux/Pasted image 20250429151708.png",
+    "My mind/Auxiliares/Linux/Pasted image 20250429151805.png",
+    "My mind/Auxiliares/Linux/Shell Script.md",
+    "My mind/Auxiliares/Linux/Pasted image 20250429151608.png",
+    "Pasted image 20250429151616.png",
+    "My mind/Auxiliares/Linux/Pasted image 20250428175322.png",
+    "Pasted image 20250428175302.png",
+    "Pasted image 20250428175111.png",
+    "My mind/Banco de dados/SQL/MySQL.md",
+    "My mind",
+    "My mind/Auxiliares/Linux",
+    "My mind/Auxiliares/Git",
+    "My mind/Auxiliares/Docker",
+    "My mind/Auxiliares",
+    "2025-04-24.md",
+    "My mind/Bots/Python/Discord",
+    "My mind/Bots/Python/Telegram",
+    "My mind/Bots/Python",
+    "My mind/Bots",
+    "My mind/RPA/Python/Selenium",
+    "My mind/Banco de dados/NO SQL/MongoDB.md",
+    "My mind/Banco de dados/SQL/PostgresSQL.md",
     "crie um link.md",
     "Bem-vindo.md"
   ]
