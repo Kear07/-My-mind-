@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "aad678e7bee54fc4",
+        "id": "568d90b135e210a4",
         "type": "tabs",
         "children": [
           {
-            "id": "8e719f54cd13e6dc",
+            "id": "630a6343c012752a",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -163,17 +163,18 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "4367fa409ae0e2cd",
+  "active": "630a6343c012752a",
   "lastOpenFiles": [
     "My mind/Auxiliares/Git/Git bash.md",
-    "My mind/Linguagens/Python/Introdução.md",
+    "Pasted image 20250508161936.png",
     "My mind/Auxiliares/Linux/Linux.md",
+    "My mind/Auxiliares/Docker/Docker.md",
+    "My mind/Linguagens/Python/Introdução.md",
     "Pasted image 20250429160011.png",
     "Sem título.canvas",
     "2025-04-29.md",
     "Anotações.md",
     "My mind/Auxiliares/Docker/Pasted image 20250429155047.png",
-    "My mind/Auxiliares/Docker/Docker.md",
     "My mind/Auxiliares/Linux/Pasted image 20250429151708.png",
     "My mind/Auxiliares/Linux/Pasted image 20250429151805.png",
     "My mind/Auxiliares/Linux/Shell Script.md",
