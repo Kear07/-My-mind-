@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "568d90b135e210a4",
+        "id": "326016693d3e2750",
         "type": "tabs",
         "children": [
           {
-            "id": "630a6343c012752a",
+            "id": "9a54a20f0a02e782",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -163,11 +163,15 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "630a6343c012752a",
+  "active": "4367fa409ae0e2cd",
   "lastOpenFiles": [
+    "My mind/Banco de dados/SQL/PostgreSQL/Funções úteis.md",
+    "My mind/Banco de dados/SQL/PostgreSQL/Recursos básicos.md",
+    "My mind/Banco de dados/SQL/PostgreSQL",
+    "My mind/Banco de dados/SQL/MySQL.md",
+    "My mind/Auxiliares/Linux/Linux.md",
     "My mind/Auxiliares/Git/Git bash.md",
     "Pasted image 20250508161936.png",
-    "My mind/Auxiliares/Linux/Linux.md",
     "My mind/Auxiliares/Docker/Docker.md",
     "My mind/Linguagens/Python/Introdução.md",
     "Pasted image 20250429160011.png",
@@ -183,7 +187,6 @@
     "My mind/Auxiliares/Linux/Pasted image 20250428175322.png",
     "Pasted image 20250428175302.png",
     "Pasted image 20250428175111.png",
-    "My mind/Banco de dados/SQL/MySQL.md",
     "My mind",
     "My mind/Auxiliares/Linux",
     "My mind/Auxiliares/Git",
@@ -194,9 +197,7 @@
     "My mind/Bots/Python/Telegram",
     "My mind/Bots/Python",
     "My mind/Bots",
-    "My mind/RPA/Python/Selenium",
     "My mind/Banco de dados/NO SQL/MongoDB.md",
-    "My mind/Banco de dados/SQL/PostgresSQL.md",
     "crie um link.md",
     "Bem-vindo.md"
   ]
