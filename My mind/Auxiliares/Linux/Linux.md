@@ -79,10 +79,10 @@ W = Modificar
 X = Executar 
 
 -- Permissão padrão
-![[Pasted image 20250429151805.png]]
+![[permissões especiais.png]]
 
 -- Permissão especial
-![[Pasted image 20250429151708.png]]
+![[permissões.png]]
 
 -- Outro método
 R = 4 | W = 2 | X = 1

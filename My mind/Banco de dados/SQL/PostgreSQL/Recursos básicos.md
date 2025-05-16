@@ -106,3 +106,7 @@ select 'abc' similar to '%(b|d)%'
 O operador % = '%Batata%' = nao importa oque vem antes ou depois
 O operador _ = '__Batata' = procure depois de 2 caractetres
 O operador | = '(B | b)atata' = procore por B e b
+
+
+
+https://halleyoliv.gitlab.io/pgdocptbr/functions.html  --Funções 

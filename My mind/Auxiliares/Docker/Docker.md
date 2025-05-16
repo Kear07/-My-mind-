@@ -37,4 +37,4 @@ docker rmi -f [img]                    = Deleta uma imagem
 docker logs [nome]                     = Exibe os logs do container 
 docker logs -f [nome]                  = Exibe os logs do container                       
 docker container ls -a
-![[Pasted image 20250429155047.png]]
+![[infos ls.png]]
