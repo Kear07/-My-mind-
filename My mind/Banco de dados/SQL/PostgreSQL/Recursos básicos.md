@@ -89,7 +89,7 @@ select upper([text]);                          = Transforma tudo em minúsculo
 
 select substring('Maça', 1, 4)                 = Exibe por posição
 
-select initcap('kear)                          = Inicia com letra maiúscula
+select initcap('kear')                         = Inicia com letra maiúscula
 
 select '4211'::int                             = Transforma em inteiro 
 select 4211::varchar                           = Transforma em texto 
