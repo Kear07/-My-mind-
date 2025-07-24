@@ -38,3 +38,5 @@ docker logs [nome]                     = Exibe os logs do container
 docker logs -f [nome]                  = Exibe os logs do container                       
 docker container ls -a
 ![[infos ls.png]]
+
+docker run --name Estudos_redis -p 6379:6379 -e REDIS_PASSWORD=1234  redis:

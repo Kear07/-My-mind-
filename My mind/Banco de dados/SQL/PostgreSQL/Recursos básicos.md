@@ -29,7 +29,7 @@ alter table [table] alter column [colun] set unique     = Não aceita repetidos 
 alter table [table] add check (id > 18)                 = Condição if números
 alter table [table] add check ('a')                     = Condição if letras
 
-alter table [table] add constraint [colun coned]         = Condição pós criação
+alter table [table] add constraint [colun coned]        = Condição pós criação
 
 ---
 
@@ -106,7 +106,6 @@ select 'abc' similar to '%(b|d)%'
 O operador % = '%Batata%' = nao importa oque vem antes ou depois
 O operador _ = '__Batata' = procure depois de 2 caractetres
 O operador | = '(B | b)atata' = procore por B e b
-
 
 
 https://halleyoliv.gitlab.io/pgdocptbr/functions.html  --Funções 

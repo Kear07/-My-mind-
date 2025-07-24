@@ -1,132 +1,203 @@
 
-docker exec -it redis redis-cli      = inicinaliza
+---
+### Inicialização
+ 
+docker exec -it redis redis-cli           = Inicia a interface de linha de comando do Redis 
 
-KEYS *  = Exibe todas as chaves valor
+----
+### Comandos básicos
 
-SET USER:111:NOME "Luke"
+KEYS *                = Exibe todas as chaves armazenadas no banco.
+KEYS "*-05*"            = Exibe chaves que contêm "-05-" em qualquer posição.
+KEYS *-15-20*:          = Exibe chaves que contêm "-15-20-" em qualquer posição.
+KEYS user:?:name      = Substitui um único caractere (coringa de um caractere). 
+KEYS user:            = Substitui zero ou mais caracteres (coringa de múltiplos caracteres).  
+KEYS user:[abc]       = Lista de caracteres. Ex: (user:a, user:b, user:c).
+KEYS user:[^e]         = Negação de letra. Ex: (user:a, user:b, mas não user:e).
+KEYS user\            = Caractere de escape para usar caracteres especiais.
 
-DBSIZE = Exibe quantas chaves existem
+DBSIZE                = Exibe o número de chaves existentes no banco.
+EXISTS [chave]        = Verifica se uma chave existe.
+DEL [chave]           = Deleta uma chave. 
+UNLINK [chave]        = Deleta uma ou mais chaves de forma assíncrona.
+RENAME [antiga nova]  = Renomeia uma chave.
+FLUSHALL              = Limpa todos os bancos de dados.
 
-SET tempo "30 seg" EX 10  = Define uma chave valor com duração de 10 seg
+---
+### Gerenciamento de Bancos de Dados
 
-TLL [chave]  = Exibe em tempo real a duração
-se retornar 1 = chave não tem tempo de duração
-se retornar 2 = chave não existe
+O Redis pode ter múltiplos bancos de dados, numerados de 0 a 15 por padrão.
 
-SET XX = Altera a chave, se existir
-SET NX = Cria a chave se não existir 
+config get databases   = Exibe a quantidade de bancos de dados configurados.
+SELECT [0-15]          = Troca para o banco de dados especificado.
 
-EXISTS [chave] = Exibe em numero se existe ou n
+----------
+### Chaves com Tempo de Expiração (TTL)
 
-DEL [chave]    = deleta a chave "bruta, interrompe todo o servidor"
-UNLINK [chave] = deleta a chave "suave, não interrompe outros processos"
+Você pode definir um tempo de vida para suas chaves, após certo tempo, elas se excluirão.
 
-RENAME [chave_antes chave_depois] = Renomeia uma chave
+SET [chave] "[valor]" EX [2] =  Define uma chave-valor com uma duração de [2] segundos.
+TTL [chave]                  =  Exibe o tempo restante de uma chave em segundos.
 
-FLUSHALL = Limpa todo o banco
+Retorno -1: A chave existe, mas não tem tempo de duração definido
+Retorno -2: A chave não existe.
 
-MSET [chaves] = Adiciona mais de uma chave por vez
-MGET [chaves] = Exibe mais de uma chave
+---
+### Manipulação de Chaves (SET Avançado)
 
-GETSET [chave] = Exibe o valor e depois atualiza o valor
+SET [chave] "[valor]" XX   = Altera o valor da chave somente se ela já existir.
+SET [chave] "[valor]" NX   = Cria a chave somente se ela não existir.
+GETSET [chave] "[valor]"  = Retorna o valor atual da chave e, atualiza o seu valor.
 
-KEYS "*-05*"  = Exibe onde tem esse numero
-KEYS *-15-20*
-.
-?  = substitui qualquer informação antes e depois
-* = substitui qualquer coisas antes e depois
-[] = lista de caracter, e conteudo ou
-^e = negação de letra
-\  = escape
+SCAN 0 MATCH [padrão] COUNT [num] = Itera as chaves do banco de dados.
+0                                 = Ordem/index onde vai começar a busca
+MATCH [padrão]                    = Filtra as chaves (mesmos padrões de KEYS).
+COUNT [numero]                    = Número de elementos a serem retornados por cada iteração.
 
-MSET sessao:1001:nome "Lucas" EX 600 sessao:1001:email "Lucas@exemplo.com" EX 600 sessao:1001:login "2025-05-20" EX 600 sessao:1002:nome "Amanda" EX 600 sessao:1002:email "Amanda@exemplo.com" EX 600 sessao:1002:login "2025-05-20" EX 600 sessao:1003:nome "João" EX 600 sessao:1003:email "João@exemplo.com" EX600 sessao:1003:login "2025-05-20" EX 600
+----
+### Comandos para Múltiplas Chaves (M)
 
+MSET [chave1] "[valor1]" [chave2] "[valor2]"  = Adiciona ou atualiza múltiplas chaves de uma vez.
+MGET [chave1 chave2]                          = Exibe os valores de múltiplas chaves.
 
-config get databases = exibe a quantidade de servidores
-dbsize = exibe a quantidade de cha
-select [0-15] troca de servidor
+Observação: EX para expiração só funciona diretamente com SET. Para MSET, você precisaria definir a expiração para cada chave individualmente.
 
-SCAN 0 MATCH sessao:?:email count 10 = conta do zero ao 10, onde tem isso
+--------
+### Tipo de Dados: Hashes (H)
 
-HSET resultado:10-05-25:sena "ganhadores" 3 = Cria 
+Hashes são como objetos ou dicionários, permitindo armazenar múltiplos campos e valores dentro de uma única chave.
 
-HSET user:123 email "marcelo@gmail.com" =  user fica com o campo email
-HSET user:123 idade 33                  = user fica com o campo idade
+HSET [key campo1] "[valor1]" [campo2] "[valor2]"   = Cria ou atualiza campos dentro de um hash.
+Ex: HSET user:123 email "marcelo@gmail.com"  
+EX: HSET user:123 idade 33 
+(adiciona múltiplos campos à chave user:123)
 
-HGET user:123 email = visualiza o campo
-HGET user:123 idade = visualiza o campo
+HMSET [key campo1] "[valor1]" [campo2] "[valor2]"  = Adiciona ou atualiza múltiplos campos
+Ex: HMSET user:123 email "marcelo@gmail.com" idade 33
 
-HMSET user:123 email "marcelo@gmail.com" idade 33 = Adiciona mais de um campo
+HGET [chave campo]  = Visualiza o valor de um campo específico dentro de um hash.
+Ex: HGET user:123 email
 
-HDEL user:123 email = Deleta o campo
+HDEL [chave campo]  = Deleta um campo de um hash.
+Ex: HDEL user:123 email
 
-HGETALL user:123 = Exibe todos os campos
-
-RPUSH fila:pedidos pedidos:001 pedidos:002 pedido:003 pedido:004 cria uma lista
-LRANGE fila:pedidos 0 -1 = exibe do começo ao fim
-
-LPOP fila:pedidos = Remove o item a esquerda
-RPOP fila:pedidos = Remove o item a direita
-
-LPOP fila:pedidos  2 = Remove 2 itens a esquerda
-RPOP fila:pedidos  2 = Remove 2 itens a direita
-
-LLEN fila:pedidos = Retorna a quantidade de itens na fila
-
-LTRIM fila:pedidos 1 2 = Mantém os intens que estão entre esse intervalo
-
-LINDEX fila:pedidos 1 = Retorna o item dessa posição
-
------
-
-RPUSH historico:user:2001 home produtos sobre produtos contato produtos
-
-LREM historico:user:2001 2 produtos = Remove os dois primeiros produtos
-LREM historico:user:2001 -2 produtos = Remove os dois ultimos produtos
-LREM historico:user:2001 0 produtos = Remove todos os produtos
-
-LSET fila:pedidos 2 pedido:005 = Substitui o item na posicao 2 por esse
+HGETALL [chave]: Exibe todos os campos e valores de um hash.
+Ex: HGETALL user:123
 
 -----
+### Tipo de Dados: Listas (L/R)
 
-SADD colaborador:101:skills "Python" "SQL" "MongoDB" = Lista sem repetidos
-SMEMBERS colaborador:101:skills            = Lista os elementos
-SISMEMBER colaborador:101:skills "Python"  = Busca um elemento
-SINTER colaborador:101:skills colaborador:102:skills = Exibe a interseçãp
-SUNION colaborador:101:skills colaborador:102:skills = Exibe a união
-SDIF colaborador:101:skills colaborador:102:skills =  exibe o que tem só no 101
+Listas são coleções ordenadas de strings. Você pode adicionar elementos no início ou no final da lista.
 
-SREM colaborador:101:skills "sql" = Deleta um elemento
-SRRANDMER colaborador:101:skills 2 = Exibe a quantidade de itens
+RPUSH [chave elemento1 elemento2]  = Adiciona um ou mais elementos ao final de uma lista.
+Ex: RPUSH fila:pedidos pedidos:001 pedidos:002 pedido:003 pedido:004
 
-SPOP colaborador:101:skills = Deleta um aleatória
+LPUSH [chave elemento1 elemento2]  = Adiciona um ou mais elementos ao início de uma lista.
+Ex: LPUSH fila:pedidos pedidos:001 pedidos:002 pedido:003 pedido:004
 
-SADD produtor:1001:vies user:1 user2: user:3
-SKARD
+LRANGE [chave start stop]          = Exibe um intervalo de elementos de uma lista.
+0: Primeiro elemento.
+-1: Último elemento.
+Ex: LRANGE fila:pedidos 0 -1 (exibe todos os elementos do começo ao fim).
 
-----------------
-ZADD ranking_vendedores [??] 1500 "Hugo"
-ZADD ranking_vendedores [NX] 1800 "Bruna"
-ZADD ranking_vendedores [INCR] 100 "Bruna"
-ZADD ranking_vendedores [GT] 1200 "Maria"   = Atualiza if esse valor for maior que o atual
-ZADD ranking_vendedores [LT] 1200 "Maria"   = Atualiza if esse valor for menor que o atual
-ZSCORE ranking_vendedores Hugo              = Exibe o score da pessoa
-ZRANK ranking_vendedores Hugo               = Exibe o rank da pessoa
-ZREVRANK ranking_vendedores Hugo            = Exibe o rank da pessoa decrescente
-ZREM ranking_vendedores Lucas               = Remove pelo nome
-ZREMRANGERBYSCORE ranking_vendedores 0 1000 = Remove todos entre esse intervalo de score
-ZREMRANGERBYRANK
+LPOP [chave]                       = Remove e retorna o elemento no início da lista.
+RPOP [chave]                       = Remove e retorna o ultimo elemento da lista.
 
-ZCARD ranking_vendedores                    = Exibe a quantidade de nomes
+LPOP [chave quantidade]            = Remove e retorna a [quantidade] de elementos no inicio 
+RPOP [chave quantidade]            = Remove e retorna a [quantidade] de elementos no fim
+
+LLEN [chave]                       = Retorna a quantidade de elementos em uma lista.
+
+LTRIM [chave start stop]           = Mantém apenas os elementos dentro do intervalo.
+Ex: LTRIM fila:pedidos 1 2 (mantém os itens que estão entre as posições 1 e 2).
+
+LINDEX [chave posição]             = Retorna o elemento em uma posição específica da lista.
+Ex: LINDEX fila:pedidos 1 (retorna o segundo elemento da lista).
+
+LREM [chave count] "[valor]":      = Remove ocorrências de um [valor] de uma lista.
+
+2: Remove os primeiros [2] elementos do inicio ao fim.
+< 2: Remove os últimos [2] elementos do [valor] do fim ao inicio.
+0: Remove todas as ocorrências do [valor].
+
+LSET [chave index] "[novo_valor]"  = Substitui o elemento na posição [index] da lista.
+
+----------
+### Tipo de Dados: Sets (S)
+Sets são coleções não ordenadas de strings únicas. Não permitem elementos duplicados.
+
+SADD [chave] "[membro1]" "[membro2]"   = Adiciona um ou mais membros a um set.
+Ex: SADD colaborador:101:skills "Python" "SQL" "MongoDB"
+
+SMEMBERS [chave]                       = Lista todos os membros de um set.
+
+SISMEMBER [chave] "[membro]"           = Verifica se um membro existe em um set.
+
+SINTER [chave1 chave2]                 = Retorna a intercessão de membros nos sets.
+
+SUNION [chave1 chave2]                 = Retorna a união de membros nos sets.
+
+SDIFF [chave1 chave2]                  = Retorna os membros que estão somente na [chave1].
+
+SREM [chave] "[membro1]" "[membro2]"   = Remove um ou mais membros de um set.
+
+SRANDMEMBER [chave quantidade]         = Retorna um ou mais membros aleatórios de um set.
+
+SPOP [chave]                           = Remove e retorna um membro aleatório de um set.
+
+SCARD [chave]                          = Retorna a quantidade de membros em um set.
+
+--------
+### Tipo de Dados: Sorted Sets (Z)
+Sorted Sets são coleções de membros únicos, onde cada membro está associado a uma pontuação (score) numérica. Os membros são armazenados em ordem crescente de score.
+
+ZADD [chave score] "[membro]"      =  Adiciona um membro com um score a um sorted set.
+Ex: ZADD ranking_vendedores 1500 "Hugo"
+
+NX: Adiciona o membro somente se ele não existir.
+Ex: ZADD ranking_vendedores NX 1800 "Bruna"
+XX: Atualiza o score do membro somente se ele já existir.
+CH: Retorna o número de membros que foram adicionados ou tiveram seus scores alterados 
+INCR: Incrementa o score do membro pelo valor fornecido.
+GT: Atualiza o score do membro somente se o novo score for maior que o score atual.
+LT: Atualiza o score do membro somente se o novo score for menor que o score atual.
+
+ZSCORE [chave] "[membro]"          = Exibe o score de um membro específico.
+
+ZRANK [chave] "[membro]"           = Exibe o rank de um membro em ordem crescente de score.
+ZREVRANK [chave] "[membro]"        = Exibe o rank de um membro em ordem decrescente de score.
+
+ZREM [chave] "[membro]"            = Remove um membro.
+ZREMRANGEBYSCORE [chave min max]   = Remove todos os membros cujo score está dentro do intervalo.
+ZREMRANGEBYRANK [chave start stop] = Remove membros pelo seu rank.
+
+ZCARD [chave]                      = Exibe a quantidade de membros.
+ZRANGE [chave start stop]          = Exibe um intervalo de membros em ordem crescente de score.
+0: Primeiro membro.
+-1: Último membro.
+
+ZRANGE [key start stop] WITHSCORES  = Exibe um intervalo de membros e os scores em ordem crescente.
+ZRANGE [key start stop] REV WITHSCORES = Exibe um intervalo de membros e seus scores decrescente.
+
+--------
+### Tipo de Dados: Bitmaps
+Bitmaps são uma forma eficiente de armazenar e manipular arrays de bits. Cada bit pode ser 0 ou 1.
+
+SETBIT [chave offset valor]       = Seta o bit na posição offset (índice) como 0 ou 1.
+Ex: SETBIT users:active 10 1      = Marca que o usuário com ID 10 está ativo.
+
+GETBIT [chave offset]	      = Exibe o bit na posição offset.
+Ex: GETBIT users:active 10    = Retorna 1 (usuário 10 está ativo).
+
+BITCOUNT [chave]	          = Conta quantos bits estão em 1 
+Ex: BITCOUNT users:active:    = Conta quantos bits estão em 1 
+
+BITOP [operação destino chave1 chave2]  = Realiza operações bit a bit entre múltiplas chaves (AND, OR, XOR, NOT). O resultado é salvo em destino.
+
+BITPOS [chave bit]	    = Encontra a posição do primeiro bit com o valor indicado (0 ou 1).
+
+STRLEN [chave]	        = Retorna o tamanho da string armazenada na chave 
 
 
-ZRANGE ranking_vendedores 0 -1
-ZRANGE ranking_vendedores 0 -1 WITHSCORES            = Crescente
-ZRANGE ranking_vendedores 0 -1 REV WITHSCORES        = Decrescente
 
-NX    = Adiciona se não existir
-XX    = Atualiza se existir
-CH    = Retorna o num de mudanças
-INCR  = Incrementa o score do membro
-GT    = Maior que
-LT    = Menor que
+

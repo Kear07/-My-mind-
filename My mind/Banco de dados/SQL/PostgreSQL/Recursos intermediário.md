@@ -35,10 +35,49 @@ FULL JOIN                                        = Pega de ambas as tables
 SELF JOIN	                                     = Pega a própria table
 
 --------------
+### Group by
 
+SELECT [cidade], [COUNT(id_cliente)] AS [total_clientes]
+FROM [clientes]
+GROUP BY [cidade];
 
-group
-order by
+GROUP BY
+O comando GROUP BY é usado para agrupar linhas que têm os mesmos valores em uma ou mais colunas. Isso é frequentemente combinado com funções de agregação
 
+---------------------
 
-funções de agregação
+### Order by
+
+ORDER BY é usado para classificar o conjunto de resultados de uma consulta em ordem crescente ou decrescente, com base em uma ou mais colunas.
+
+SELECT [coluna1, coluna2] FROM [tabela]
+ORDER BY [coluna_para_ordenar ASC | DESC]
+
+ASC (Ascendente): Ordena do menor para o maior (padrão se nada for especificado).
+DESC (Descendente): Ordena do maior para o menor.
+
+---------
+### Funções de agregação
+
+Funções de Agregação realizam um cálculo em um conjunto de valores (um grupo de linhas) e retornam um único valor.
+
+COUNT()  = Conta o número de linhas ou valores não nulos.
+SUM()	 = Calcula a soma total de uma coluna numérica.
+AVG()	 = Calcula a média de uma coluna numérica.
+MIN()	 = Encontra o menor valor em uma coluna.
+MAX()	 = Encontra o maior valor em uma coluna.
+
+Ex: 
+SELECT COUNT(*) AS [total_pedidos] FROM pedidos     = Conta quantos pedidos existem
+
+-------
+### Union
+
+Os operadores UNION e UNION ALL são usados para combinar o conjunto de resultados de duas ou mais instruções SELECT em um único conjunto de resultados.
+
+union     = Junta as colunas, evitando as duplicidades
+union all = Junta as coluna
+
+SELECT [coluna1], [coluna2] FROM [tabela1]
+UNION | UNION ALL
+SELECT [coluna1], [coluna2] FROM [tabela2]

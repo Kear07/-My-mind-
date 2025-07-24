@@ -39,6 +39,3 @@
 .screenshot(region=([x],[y],[w],[h]))     = Printa com especificações
 
 ---
-### Teclas 
-
-![[Pasted image 20250515165850.png]]
