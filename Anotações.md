@@ -1,20 +1,16 @@
 Olá, Kear...
 Frases:
 
-
 ### Perguntas:
 O que é vencer na vida?
 O que é a dor?
+O que é o amor?
 
 "Muitas vezes o ódio nasce da dor.  A dor evolui para raiva, e a raiva se torna odio"
 LITERALMENTE: [DOR >> RAIVA >> ODÍO]
 A dor é a ferida,
 a raiva é o sangue quente,
 e o ódio é a cicatriz que nunca esquecemos.
-
-
-O que é o amor?
-
 
 ---
 
@@ -23,6 +19,7 @@ O que é o amor?
 "Mil cairão ao teu lado, e dez mil a tua direita, más tu jamais serás atingindo"
 "E não ha nada como um dia após o outro dia"
 "Vida, fica rico logo por favor"
+"a partir de agora o mundo sentirá a dor"
 
 ---
 
