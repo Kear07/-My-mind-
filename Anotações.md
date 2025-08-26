@@ -5,23 +5,26 @@ Frases:
 O que é vencer na vida?
 O que é a dor?
 O que é o amor?
+A dor te torna interessante?
+
 
 "Muitas vezes o ódio nasce da dor.  A dor evolui para raiva, e a raiva se torna odio"
 LITERALMENTE: [DOR >> RAIVA >> ODÍO]
-A dor é a ferida,
-a raiva é o sangue quente,
+A dor é como uma ferida,
+a raiva é o sangue que se move para conter,
 e o ódio é a cicatriz que nunca esquecemos.
 
+Dor é passageira
+Raiva momentânea
+Ódio constante e quase que irreversível 
+
 ---
-
-
 ### Adoração:
 "Mil cairão ao teu lado, e dez mil a tua direita, más tu jamais serás atingindo"
-"E não ha nada como um dia após o outro dia"
+"E não há nada como um dia após o outro dia"
 "Vida, fica rico logo por favor"
-"a partir de agora o mundo sentirá a dor"
-
----
+"a partir de agora o mundo sentirá/conhecerá a verdadeira dor" 
+"Aqueles que não entendem a verdadeira dor nunca podem entender a verdadeira paz"
 
 ### Reflexão:
 "A tristeza dos derrotados não vale a minha vitória"
@@ -29,7 +32,7 @@ e o ódio é a cicatriz que nunca esquecemos.
 "Porque o silencio? Seja o mestre de suas palavras ou serás escravo delas"
 "A luz cega quem aqueles que na escuridão habitam"
 "O amor é o próprio ódio disfarçado"
-
+"O verdadeiro amor reflete seu ódio, sua verdadeira dor, reflete sua paz"
 "A queda só existe após a ascensão"
 "Aquilo que vc mais pensa é aquilo que vc mais teme"
 
