@@ -35,6 +35,9 @@ Raiva momentânea
 "O verdadeiro amor reflete seu ódio, sua verdadeira dor, reflete sua paz"
 "A queda só existe após a ascensão"
 "Aquilo que vc mais pensa é aquilo que vc mais teme"
+"Sofrer em silêncio não é nobre"
+"Romantizar a dor é o caralho"
+
 
 "Todo dia fica um pouco mais fácil, mas vc tem que fazer todos os dias, essa é a parte difícil"
 

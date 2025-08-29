@@ -197,7 +197,3 @@ BITOP [operação destino chave1 chave2]  = Realiza operações bit a bit entre 
 BITPOS [chave bit]	    = Encontra a posição do primeiro bit com o valor indicado (0 ou 1).
 
 STRLEN [chave]	        = Retorna o tamanho da string armazenada na chave 
-
-
-
-
