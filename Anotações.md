@@ -37,10 +37,17 @@ Raiva momentânea
 "Aquilo que vc mais pensa é aquilo que vc mais teme"
 "Sofrer em silêncio não é nobre"
 "Romantizar a dor é o caralho"
+"Entre ser amado e ser respeitado, escolha o segundo e sorri menos"
+
+-- A era da embalagem
+"Os homens julgam mais pelos olhos do que pelas mãos"
+"Quem parece confiante, ganha mais de quem é competente"
+"Uma boa postura vale mais que um bom currículo"
+"O seu tom de voz convence antes do seu conteúdo"
+"Eles enxergam aqui que vc exala"
 
 
 "Todo dia fica um pouco mais fácil, mas vc tem que fazer todos os dias, essa é a parte difícil"
-
 "Antes a minha dor era grande, e eu me sentia mal com isso, hoje percebo que a dor me fez crescer, e quero a de volta"
 
 "Cresça em silêncio, igual à dor." --Muitos não saber o fardo, mas vc sabe
