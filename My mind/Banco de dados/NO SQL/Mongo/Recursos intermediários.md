@@ -1,6 +1,4 @@
-
 -----
-
 ### Operadores de consulta lógicos (find e match)
 
 "Sempre use db.[colletion] antes dos comandos"

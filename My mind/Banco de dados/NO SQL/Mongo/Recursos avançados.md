@@ -1,6 +1,4 @@
-
 -------
-
 ### Aggregate
 
 "Sempre use db.[colletion] antes dos comandos"
@@ -14,45 +12,24 @@
 .aggregate([ {$unwind: "$tags" } ])                                            = Transforma um array em vários documentos, um para cada elemento. 
 .aggregate([ {$lookup: {from: "outra_colecao", localField: "id_local", foreignField: "id_fk", as: "new_campo" }} ])   = Join
 .aggregate([ {$count: "totalDeDocumentos" } ])                                 = Conta os documentos no pipeline
-.aggregate([  ])
-.aggregate([  ])
 
+-----------
+#### Operadores de Expressão (Em $group)
 
-##### Operadores de Expressão (usados em `$group`)
+sum: Soma valores.    = [{totalVendas: {$sum: "$preco" }}]
+avg: Calcula a média. = [{mediaIdade: {$avg: "$idade" }}]
+max: Valor máximo.    = [{precoMaximo: {$max: "$preco" }}]
+min: Valor mínimo.    = [{precoMinimo: {$min: "$preco" }}]
 
-    
-    - `$sum`: Soma valores. `{ totalVendas: { $sum: "$preco" } }`
-        
-    - `$avg`: Calcula a média. `{ mediaIdade: { $avg: "$idade" } }`
-        
-    - `$max`: Valor máximo. `{ precoMaximo: { $max: "$preco" } }`
-        
-    - `$min`: Valor mínimo. `{ precoMinimo: { $min: "$preco" } }`
-        
-- **Matemáticos (em `$project`):**
-    
-    - `$multiply`: `{ faturamento: { $multiply: [ "$preco", "$quantidade" ] } }`
-        
-    - `$subtract`: `{ precoFinal: { $subtract: [ "$preco", "$desconto" ] } }`
-        
-    - `$divide`: `{ media: { $divide: [ "$total", "$itens" ] } }`
-        
-    - `$round`: `{ precoAprox: { $round: [ "$preco", 2 ] } }` (Arredonda para 2 casas decimais)
-        
-- **Strings (em `$project`):**
-    
-    - `$concat`: `{ nomeCompleto: { $concat: [ "$primeiro_nome", " ", "$sobrenome" ] } }`
-        
-    - `$toUpper`: `{ nome_maiusculo: { $toUpper: "$nome" } }`
-        
-    - `$toLower`: `{ nome_minusculo: { $toLower: "$nome" } }`
-        
-    - `$split`: `{ partes_nome: { $split: [ "$nomeCompleto", " " ] } }`
+---------
+#### Operadores Matemáticos (em $project)
 
-
+multiply: Multiplica valores. = [{faturamento: {$multiply: [ "$preco", "$quantidade" ] }}]
+subtract: Subtrai valores.    = [{precoFinal: {$subtract: [ "$preco", "$desconto" ] }}]
+divide: Divide valores.       = [{media: {$divide: [ "$total", "$itens" ] }}]
+round: Arredonda um número.   = [{precoAprox: {$round: [ "$preco", 2 ] }}]           (Arredonda para 2 casas decimais)
 
 -----
-
 ### Índices
 
 .createIndex( {campo: 1} )                                                = Cria um índice ascendente no `campo`. Use `-1` para descendente.

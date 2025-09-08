@@ -52,7 +52,6 @@ Enquanto houverem vencedores, os vencidos resistirão
 
 o ódio nasce pra proteger o amor
 
-------------
 O amor dura de 2 meses a 2 anos, depois disso são as ações e atitudes que te fazem amar, afinal é a quimica, quimicamente uma bosta.
 
 fiz, faço e farei do meu silêncio um império, sem mistérios.
@@ -61,5 +60,6 @@ fiz, faço e farei do meu silêncio um império, sem mistérios.
 Quem fábrica armas fábrica mortes e destruição
 Quem fábrica dinheiro fábrica a miséria
 Quem fábrica comédia fábrica risadas
+Quem fábrica noticias fabrica esperança e preconceitos
 Fábricas fabricam poluição
 

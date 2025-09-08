@@ -1,5 +1,4 @@
-
----
+-----------
 ### Inicialização
  
 docker exec -it redis redis-cli           = Inicia a interface de linha de comando do Redis 

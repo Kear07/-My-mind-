@@ -1,5 +1,4 @@
-
----
+---------
 ### Funções básicas
 
 current_date                                     = Exibe a data atual 
@@ -18,13 +17,15 @@ alter table [table] drop [colun]                 = Remove uma coluna
 select * from [table]                            = Exibe uma tabela
 alter table [table] rename to [table2]           = Renomeia uma tabela
 drop table [table]                               = Deleta uma tabela 
-truncate table [table]                           = Deleta os dados da tabela 
+truncate table [table]                           = Deleta os dados da tabela
+truncate table [table] restart identity          = Deleta dos dados e reinicia o indice
 
 ---------
 ### Restrições para tabelas
 
 alter table [table] alter column [colun] set not null   = Não aceita nulos
-alter table [table] alter column [colun] set unique     = Não aceita repetidos alter table [table] alter column [colun] set unique     = Aceita tudo 
+alter table [table] alter column [colun] set unique     = Não aceita repetidos 
+alter table [table] alter column [colun] set unique     = Aceita tudo 
 
 alter table [table] add check (id > 18)                 = Condição if números
 alter table [table] add check ('a')                     = Condição if letras

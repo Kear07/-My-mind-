@@ -1,5 +1,4 @@
-
----
+------
 ## Listas (arrays)
 
 let frutas = ["maçã", "banana", "laranja", "uva"];

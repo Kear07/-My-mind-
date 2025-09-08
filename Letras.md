@@ -1,5 +1,4 @@
-
----
+-----
 ### 28/07, Domingo, 14:00
 
 Bom dia pai... (Meu pai responde, bom dia filho)
@@ -82,7 +81,7 @@ em 10 anos, tudo mudou
 nunca mais fui o (ou, eu mesmo) mesmo
 
 vamos abaixar a cabeça
-lembrar do inimigo
+lembrar das promessas
 falar sobre verdades
 esconder as mentiras
 

@@ -1,5 +1,4 @@
-
----
+------
 ### Declaração de variáveis 
 
 var      = Forma antiga, possui alguns bugs

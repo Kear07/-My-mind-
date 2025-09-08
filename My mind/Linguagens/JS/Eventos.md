@@ -1,6 +1,4 @@
-
----
-
+-----------
 onclick            = Disparado quando recebe um click
 ondblclick         = Disparado quando click duplo
 onmouseover        = Disparado quando o mouse está sobre
