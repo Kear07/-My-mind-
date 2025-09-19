@@ -41,6 +41,12 @@ Raiva momentânea
 "Sofrer em silêncio não significa ser nobre"
 "Romantizar a dor é o caralho"
 "Entre ser amado e ser respeitado, escolha o segundo e sorria menos"
+"A solidão é menos sobre estar sem companhia e mais sobre estar desconectado"
+"Se vc não pode ser sua própria plateia, não deveria subir ao palco"
+"solitude"
+"redes sociais = vitrine de egos carentes de validação"
+
+
 
 -- A era da embalagem
 "Os homens julgam mais pelos olhos do que pelas mãos"
