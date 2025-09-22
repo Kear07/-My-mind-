@@ -56,6 +56,10 @@ O amor dura de 2 meses a 2 anos, depois disso são as ações e atitudes que te 
 
 fiz, faço e farei do meu silêncio um império, sem mistérios.
 
+isso diz muito sem precisar de uma única palavra.
+
+o que eu quero hoje, eu já tive, mas hoje não tenho mais nada daquilo que eu tinha
+
 ------ Fabricadores
 Quem fábrica armas fábrica mortes e destruição
 Quem fábrica dinheiro fábrica a miséria

@@ -37,28 +37,15 @@ PropertyVetoException              = Quando uma alteração em uma propriedade d
 ReflectiveOperationException       = Captura diversos tipos de exceções relacionadas à Reflexão (Reflection),
 RefreshFailedException             = Quando uma tentativa de renovar ou atualizar credenciais de segurança falha.
 RuntimeException                   = Erros em gerais.
-SAXException                       = Ocorre durante a leitura do XML.
 ScriptException                    = Indica que ocorreu um erro durante a execução de um script
 SQLException                       = Indica que ocorreu um erro durante uma operação com um banco de dados.
 StringConcatException              = Quando ocorre um erro durante o processo otimizado de concatenação de strings.
-
-
-
-
-TimeoutException, 
-TooManyListenersException,
-TransformerException,
-TransformException,
-UnmodifiableClassException,
-UnsupportedAudioFileException,
-UnsupportedCallbackException,
-UnsupportedFlavorException,
-UnsupportedLookAndFeelException,
-
-
-
-
-
-
-URIReferenceException, URISyntaxException, VMStartException, XAException, XMLParseException, XMLSignatureException, XMLStreamException, XPathException
-
+TimeoutException                   = Quando uma operação que tem um tempo limite para ser concluída excede esse tempo.
+TransformerException               = Quando ocorre um erro grave durante a transformação de um documento XML.
+UnmodifiableClassException         = Ao tentar usar um agente Java para modificar uma classe que não permite modificações.
+UnsupportedFlavorException         = Quando você solicita dados em um formato específico mas os dados estão em outros formatos.
+XMLParseException                  = Indica um erro básico e fundamental durante a análise de um documento XML.
+SAXException                       = Indica um erro avançado durante a análise de um documento XML.
+XPathException                     = Quando há um erro em uma expressão XPath ou durante sua avaliação.
+VMStartException                   = Indica que uma tentativa de iniciar uma Máquina Virtual Java (JVM) alvo falhou.
+XAException                        = Indica um erro sério em um gerenciador de recursos.

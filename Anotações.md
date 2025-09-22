@@ -46,7 +46,7 @@ Raiva momentânea
 "solitude"
 "redes sociais = vitrine de egos carentes de validação"
 
-
+"ontem é historia e amanhã é um mistério"
 
 -- A era da embalagem
 "Os homens julgam mais pelos olhos do que pelas mãos"

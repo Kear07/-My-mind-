@@ -64,6 +64,8 @@ sejam bem vindos a minha vez
 
 ### Oração da manhã
 
+Ideia = Cria uma passagem para um começo de dia, não vai ser muito repetitivo nem muito religioso
+
 Bom dia pai... (Meu pai responde, bom dia filho)
 Bom dia mãe, ... (3-5 segundos de silêncio)
 Bom dia a toda aqueles que sempre me protegeram e me protegem, só tenho a agradecer, mais um dia...
@@ -72,30 +74,66 @@ Em nome do pai, do filho, do espírito santo, amém.
 
 Hoje eu acordei, mais um vez,
 Me levantei, mais uma vez.
+só mais uma vez
 
 A sensação ruim, eu me acostumei
 nem o tempo pode me curar
 quem dera realmente me amar
+ahhh, vamos falarrrr
 
 em 10 anos, tudo mudou
-nunca mais fui o (ou, eu mesmo) mesmo
+nunca mais fui eu mesmo
+Ja tive tudo que hoje eu quero
+hoje não tenho nada do que tinha
 
-vamos abaixar a cabeça
-lembrar das promessas
-falar sobre verdades
-esconder as mentiras
+olho para baixo, visualizo teus véus
+não, não é fácil chegar aos céus
+fazemos falsas promessas
+ou falsas verdades?
 
 vamos falar de amor
 oferecer uma flor
+sentir esse calor
+é apenas um favor
+
 
 o dinheiro não te compra
 apenas te manipula
 não se iluda
 peça ajuda
-abra os olhos, siga lutando
 
-muitos vivem, mas poucos tem vida
-Ja tive tudo que hoje eu quero
-hoje não tenho nada do que queria
-quem me falaria?
-ahammm...
+
+me ajudem, ou me mudem
+muito se vive, mas poucos se tem vida
+quem me falaria? quem me faltaria?
+...
+
+-------------
+### 04:37 am
+
+(Som de alarme... 4-7 seg)
+
+Bom dia pai... (Meu pai responde, bom dia filho)
+Bom dia mãe, ... (3-5 segundos de silêncio)
+Bom dia a toda aqueles que sempre me protegeram e me protegem, só tenho a agradecer, mais um dia...
+
+Em nome do pai, do filho, do espírito santo, amém.
+
+mais um dia, seja bem vindo
+(barulho de roupa, banheiro)
+
+Tchau pai...
+
+(barulho de porta, portão)
+
+dias de luta resultam em dias de gloria
+essa é a sua memoria?
+
+Sempre fui longe, mas sempre retornei
+a casa eu sempre voltei
+
+fazendo o meu todos os dias, 
+mas eles só falam de vadias
+
+escola, trabalho, bico, e continuo pobre
+não é nada mole, faz seu corre, 
