@@ -1,5 +1,4 @@
-
----
+----------------------------
 ### Métodos
 
 | Métodos              | Chamando quando        | Exemplo de uso                      | Quando usar                                     |
@@ -72,7 +71,6 @@ p1()                # __call__
 @staticmethod     = Uma função que não usa atributos da instância nem da classe (função auxiliar)
 
 ---------
-
 ### Herança
 
 class Funcionario(Pessoa):

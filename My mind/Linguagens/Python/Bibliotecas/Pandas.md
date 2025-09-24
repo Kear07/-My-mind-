@@ -1,5 +1,4 @@
-
----
+------------------------------
 import pandas as pd
 
 ### Leitura
@@ -91,7 +90,6 @@ df['Idade'].mode()         = Retorna o(s) valor(es) que mais se repetem da colun
 pd.concat([df1, df2])      = Concatena DataFrames
 
 ----------
-
 ### Manipulação de Strings
 
 df['Nome'].str.lower()     = Converte todas as letras  para minúsculas.

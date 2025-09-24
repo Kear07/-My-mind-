@@ -1,5 +1,4 @@
-
----
+----------------
 ### Tipos de dados
 
 nome = 'Ana'             = String 
